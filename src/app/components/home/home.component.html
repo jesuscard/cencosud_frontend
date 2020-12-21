@@ -1,0 +1,20 @@
+<div class="navegation-view">
+    Bienvenido a <span class="view-active">WEB CIUDADES</span>
+</div>
+<div class="container">
+    <div fxLayout="row">
+        <div fxFlex="65">
+            <div *ngFor="let ciudad of listCiudades">
+                <div >
+                    <h4>Ciudad: {{ ciudad.city }}</h4>
+                    <h4>Temperatura °C: {{ ciudad.temp }}</h4>
+                    <h4>Hora: {{ ciudad.hour }}</h4>
+                    <h4>Latitud: {{ ciudad.cord.lat }} / Longitud: {{ ciudad.cord.lon }}</h4>
+                </div>
+                --------------------------------------------
+            </div>
+        </div>
+    </div>
+</div>
+
+<loading *ngIf="exitoConsulta"></loading>

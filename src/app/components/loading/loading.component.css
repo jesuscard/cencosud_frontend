@@ -1,0 +1,132 @@
+.opacity-cargando {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10000;
+}
+
+.isotipo-lod {
+  width: 71px;
+  top: -250%;
+  position: relative;
+}
+
+  .isotipo-lod img {
+    width: 100%;
+  }
+
+.loader {
+  height: 20px;
+  width: 71px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.loader--dot {
+  display: none;
+  animation-name: loader;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  /*border: 2px solid white;*/
+}
+
+  .loader--dot:first-child {
+    background-color: #65dc5a;
+    animation-delay: 0.5s;
+  }
+
+  .loader--dot:nth-child(2) {
+    background-color: #00d7cb;
+    animation-delay: 0.4s;
+    /*opacity: 0.90;*/
+  }
+
+  .loader--dot:nth-child(3) {
+    background-color: #0099ff;
+    animation-delay: 0.3s;
+    /*opacity: 0.80;*/
+  }
+
+  .loader--dot:nth-child(4) {
+    background-color: #005794;
+    animation-delay: 0.2s;
+    /*opacity: 0.70;*/
+  }
+
+/*.loader--dot:nth-child(5) {
+    background-color: #eb0243;
+    animation-delay: 0.1s;
+    opacity: 0.60;
+  }
+
+  .loader--dot:nth-child(6) {
+    background-color: #eb0243;
+    animation-delay: 0s;
+    opacity: 0.50;
+  }*/
+
+.loader--text {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  width: 4rem;
+  margin: auto;
+  color: white;
+}
+
+  .loader--text:after {
+    content: "Cargando";
+    animation-name: loading-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+
+  45% {
+    transform: translateX(150px);
+  }
+
+  65% {
+    transform: translateX(150px);
+  }
+
+  95% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes loading-text {
+  0% {
+    content: "Cargando";
+  }
+
+  25% {
+    content: "Cargando.";
+  }
+
+  50% {
+    content: "Cargando..";
+  }
+
+  75% {
+    content: "Cargando...";
+  }
+}
